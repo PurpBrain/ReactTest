@@ -1,12 +1,14 @@
-import { HaashRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
+import About from './pages/About';
 import MainLayout from './layouts/MainLayout';
 
-const MainRoutes = () = {
+const MainRoutes = () => {
   return (
     <MainLayout>
       <Routes>
-        <Route path="Home" exact element={<Home/>}/>
+        <Route path="/" index exact element={<Home/>}/>
+        <Route path="/about" exact element={<About/>}/>
       </Routes>
     </MainLayout>
   )
@@ -14,11 +16,11 @@ const MainRoutes = () = {
 
 function App() {
   return (
-    <HaashRouter>
+    <HashRouter>
       <Routes>
-        <Route path='/' index exact element={<MainRoutes/>} />
+        <Route path='/*' exact element={<MainRoutes/>} />
       </Routes>
-    </HaashRouter>
+    </HashRouter>
   );
 }
 

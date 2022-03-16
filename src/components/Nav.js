@@ -17,8 +17,8 @@ const Navs = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="">
-              <Nav.Link href="#action1">Accueil</Nav.Link>
-              <Nav.Link href="#action2">Link</Nav.Link>
+              <Nav.Link href="/#/">Accueil</Nav.Link>
+              <Nav.Link href="/#/about">A propos de nous</Nav.Link>
               <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
                 <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>

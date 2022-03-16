@@ -1,8 +1,12 @@
-const MainLayout = ({children}) => {
+import Navs from "../components/Nav";
+
+const MainLayout = ({ children }) => {
     return (
         <div>
-            <div>{children}</div>
+            <Navs />
+            {children}
         </div>
+
     );
 };
 
