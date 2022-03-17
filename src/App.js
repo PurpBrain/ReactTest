@@ -4,10 +4,11 @@ import About from './pages/About';
 import MainLayout from './layouts/MainLayout';
 
 const MainRoutes = () => {
+
   return (
     <MainLayout>
       <Routes>
-        <Route path="/" index exact element={<Home/>}/>
+        <Route path="/" index exact element={<Home />}/>
         <Route path="/about" exact element={<About/>}/>
       </Routes>
     </MainLayout>

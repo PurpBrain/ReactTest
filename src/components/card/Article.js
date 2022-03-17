@@ -1,44 +1,32 @@
 import { Card, Container, Row, Col } from "react-bootstrap"
 
-const Article = () => {
+const Article = (props) => {
+    const { list } = props;
+
     return (
-        <Container className="pt-3">
+        <div className="idCheck">
+            <Container className="pt-3">
             <Row>
-                <Col>
-                    <Card>
-                        <Card.Img className="sameImg" variant="top" src={require('../../assets/img/240sx.jpg')} />
-                        <Card.Body>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk
-                                of the card's content.
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card>
-                        <Card.Img className="sameImg" variant="top" src={require('../../assets/img/240sx.jpg')} />
-                        <Card.Body>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk
-                                of the card's content.
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card>
-                        <Card.Img className="sameImg" variant="top" src={require('../../assets/img/240sx.jpg')} />
-                        <Card.Body>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk
-                                of the card's content.
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </Col>
+                {
+                Object.entries(list).map((el, index) => {
+                    console.log(el)
+                    return (
+                        <Col key={index}>
+                            <Card >
+                                <Card.Img key={el[1]} className="sameImg" variant="top" src={require(`${el[1].img}`)} />
+                                <Card.Body>
+                                    <Card.Text>
+                                        {el[1].title}
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    )
+                })}
             </Row>
         </Container>
+        </div>
+        
     )
 }
 
