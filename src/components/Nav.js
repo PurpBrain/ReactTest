@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, Container, Offcanvas, NavDropdown, Form, FormControl, Button } from 'react-bootstrap'
+import { Navbar, Nav, Container, Offcanvas } from 'react-bootstrap'
 
 const Navs = () => {
   return (
@@ -13,22 +13,22 @@ const Navs = () => {
           placement="end"
         >
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title id="offcanvasNavbarLabel">Offcanvas</Offcanvas.Title>
+            <Offcanvas.Title id="offcanvasNavbarLabel">Une Navbar</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="">
-              <Nav.Link href="/#/">Accueil</Nav.Link>
-              <Nav.Link href="/#/about">A propos de nous</Nav.Link>
-              <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
+              <Nav.Link href="/#/pagination">Pagination</Nav.Link>
+              {/* <Nav.Link href="/#/about">A propos de nous</Nav.Link> */}
+              {/* <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
                 <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action5">
                   Something else here
                 </NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown> */}
             </Nav>
-            <Form className="d-flex">
+            {/* <Form className="d-flex">
               <FormControl
                 type="search"
                 placeholder="Search"
@@ -36,7 +36,7 @@ const Navs = () => {
                 aria-label="Search"
               />
               <Button variant="outline-success">Search</Button>
-            </Form>
+            </Form> */}
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>

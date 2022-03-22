@@ -1,7 +1,7 @@
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import About from './pages/About';
 import MainLayout from './layouts/MainLayout';
+import Pagination from './pages/Pagination';
 
 const MainRoutes = () => {
 
@@ -9,7 +9,7 @@ const MainRoutes = () => {
     <MainLayout>
       <Routes>
         <Route path="/" index exact element={<Home />}/>
-        <Route path="/about" exact element={<About/>}/>
+        <Route path="/pagination" exact element={<Pagination/>}/>
       </Routes>
     </MainLayout>
   )

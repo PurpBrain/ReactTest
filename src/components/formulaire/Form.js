@@ -29,7 +29,7 @@ const Formulaire = () => {
                 </Col>
                 <Col>
                 <div>
-                    <img className='sameImg' src={require('../../assets/img/240sx.jpg')}></img>
+                    <img className='sameImg' alt="voiture" src={require('../../assets/img/240sx.jpg')}></img>
                 </div>
                 </Col>
             </Row>
