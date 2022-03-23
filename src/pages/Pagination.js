@@ -9,7 +9,7 @@ const Pagination = () => {
     const showMore = () => {
         setVisible((preValue) => preValue + 3)
     }
- 
+
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/posts")
             .then((res) => res.json())
@@ -26,7 +26,7 @@ const Pagination = () => {
                                 <span>{items.id}</span>
                                 <p>{items.body}</p>
                             </div>
-                        </div>          
+                        </div>
                     ))}
                     <div className='d-flex justify-content-center'>
                         <button className='btn btn-primary' onClick={showMore}>Load More !</button>
